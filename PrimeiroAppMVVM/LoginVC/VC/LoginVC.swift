@@ -32,9 +32,8 @@ class LoginVC: UIViewController {
 
 extension LoginVC: LoginScreenProtocol {
     func tappedRegisterButton() {
-//        let vc = RegisterVC()
-//        navigationController?.pushViewController(vc, animated: true)
-        fatalError()
+        let vc = RegisterVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tappedLoginButton() {
@@ -71,7 +70,6 @@ extension LoginVC: UITextFieldDelegate {
             loginScreen?.loginButton.isEnabled = false
             loginScreen?.loginButton.backgroundColor = .lightGray
         }
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
