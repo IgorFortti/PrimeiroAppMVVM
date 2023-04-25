@@ -5,7 +5,6 @@
 //  Created by Igor Fortti on 17/02/23.
 //
 
-import UIKit
 import Firebase
 
 protocol RegisterViewModelProtocol: AnyObject {

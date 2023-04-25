@@ -38,14 +38,18 @@ class StoryCollectionViewCellScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(profileImageView)
-        addSubview(addButton)
-        addSubview(userNameLabel)
+        addElements()
         configConstrains()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func addElements() {
+        addSubview(profileImageView)
+        addSubview(addButton)
+        addSubview(userNameLabel)
     }
     
     private func configConstrains() {
@@ -60,12 +64,9 @@ class StoryCollectionViewCellScreen: UIView {
             addButton.bottomAnchor.constraint(equalTo: profileImageView.bottomAnchor),
             addButton.trailingAnchor.constraint(equalTo: profileImageView.trailingAnchor),
             
-            
             userNameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 10),
             userNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             userNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            
         ])
     }
-    
 }

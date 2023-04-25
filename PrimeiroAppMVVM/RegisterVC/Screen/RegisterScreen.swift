@@ -136,7 +136,5 @@ class RegisterScreen: UIView {
         emailTextField.delegate = delegate
         passwordTextField.delegate = delegate
     }
-    
-    
 }
 

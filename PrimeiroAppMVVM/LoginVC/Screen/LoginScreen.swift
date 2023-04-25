@@ -100,6 +100,11 @@ class LoginScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
+    }
+    
     private func addElements() {
         addSubview(loginLabel)
         addSubview(emailTextField)
@@ -133,12 +138,5 @@ class LoginScreen: UIView {
             
         ])
     }
-    
-    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        emailTextField.delegate = delegate
-        passwordTextField.delegate = delegate
-    }
-    
-    
 }
 

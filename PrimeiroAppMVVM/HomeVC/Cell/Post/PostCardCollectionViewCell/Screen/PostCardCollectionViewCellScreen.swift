@@ -19,33 +19,23 @@ class PostCardCollectionViewCellScreen: UIView {
         cv.backgroundColor = .clear
         return cv
     }()
-    
-    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
-        configConstrints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addElements() {
-        addSubview(collectionView)
-        collectionView.pin(to: self)
-        
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
     }
     
-    func configConstrints() {
-        NSLayoutConstraint.activate([
-        
-        
-        ])
+    private func addElements() {
+        addSubview(collectionView)
+        collectionView.pin(to: self)
     }
-
 }

@@ -10,7 +10,6 @@ import UIKit
 class RegisterVC: UIViewController {
     
     private var registerScreen: RegisterScreen?
-    
     private var viewModel: RegisterViewModel = RegisterViewModel()
     
     override func loadView() {
@@ -24,7 +23,6 @@ class RegisterVC: UIViewController {
         registerScreen?.configTextFieldDelegate(delegate: self)
         viewModel.delegate(delegate: self)
     }
-
 }
 
 extension RegisterVC: RegisterScreenProtocol {
@@ -35,7 +33,6 @@ extension RegisterVC: RegisterScreenProtocol {
     func tappedRegisterButton() {
         viewModel.registerUser(email: registerScreen?.emailTextField.text ?? "", password: registerScreen?.passwordTextField.text ?? "")
     }
- 
 }
 
 extension RegisterVC: RegisterViewModelProtocol {

@@ -10,7 +10,6 @@ import UIKit
 class LoginVC: UIViewController {
     
     private var loginScreen: LoginScreen?
-    
     private var viewModel: LoginViewModel = LoginViewModel()
     
     override func loadView() {
@@ -39,7 +38,6 @@ extension LoginVC: LoginScreenProtocol {
     func tappedLoginButton() {
         viewModel.login(email: loginScreen?.emailTextField.text ?? "", password: loginScreen?.passwordTextField.text ?? "")
     }
- 
 }
 
 extension LoginVC: LoginViewModelProtocol {

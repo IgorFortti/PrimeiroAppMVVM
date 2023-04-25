@@ -20,7 +20,5 @@ class Alert {
         let ok = UIAlertAction(title: "Ok", style: .default)
         alertController.addAction(ok)
         controller.present(alertController, animated: true)
-        
     }
-
 }

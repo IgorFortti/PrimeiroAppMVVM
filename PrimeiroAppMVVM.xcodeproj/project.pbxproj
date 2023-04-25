@@ -104,7 +104,6 @@
 				1B37880B6BB9AC7E97084511 /* Pods-PrimeiroAppMVVM.debug.xcconfig */,
 				D88E0E24DB2BDB3EB4665C67 /* Pods-PrimeiroAppMVVM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,10 +257,10 @@
 		FAC6DCF3299D792E00054D89 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				FA9AF63E299FEFA9006A323A /* VC */,
-				FAD1A581299E5BA0007B2AF8 /* Cell */,
 				FAD1A58A299E732B007B2AF8 /* ViewModel */,
+				FA9AF63E299FEFA9006A323A /* VC */,
 				FAD1A58B299E7347007B2AF8 /* Screen */,
+				FAD1A581299E5BA0007B2AF8 /* Cell */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";

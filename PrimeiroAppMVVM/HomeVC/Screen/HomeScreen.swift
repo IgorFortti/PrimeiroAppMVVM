@@ -21,11 +21,6 @@ class HomeScreen: UIView {
         return cv
     }()
     
-    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
-    }
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
@@ -37,13 +32,16 @@ class HomeScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addElements() {
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+    
+    private func addElements() {
         addSubview(collectionView)
     }
     
-    func configConstraints () {
+    private func configConstraints () {
         collectionView.pin(to: self)
     }
-    
-
 }

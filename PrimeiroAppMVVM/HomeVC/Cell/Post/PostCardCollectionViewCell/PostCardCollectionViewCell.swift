@@ -10,9 +10,7 @@ import UIKit
 class PostCardCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "PostCardCollectionViewCell"
-    
     private var screen: PostCardCollectionViewCellScreen = PostCardCollectionViewCellScreen()
-    
     private var viewModel: PostCardViewModel?
     
     override init(frame: CGRect) {
@@ -25,15 +23,15 @@ class PostCardCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func setupCell(listPosts: [Posts]) {
+        viewModel = PostCardViewModel(listPosts: listPosts)
+    }
+    
     private func configScreen() {
         screen.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(screen)
         screen.pin(to: contentView)
         
-    }
-    
-    public func setupCell(listPosts: [Posts]) {
-        viewModel = PostCardViewModel(listPosts: listPosts)
     }
 }
 
@@ -53,5 +51,4 @@ extension PostCardCollectionViewCell: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 450)
     }
-    
 }

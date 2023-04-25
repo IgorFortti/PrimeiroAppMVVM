@@ -22,5 +22,4 @@ class StoryCardViewModel {
     func loudCurrentStory (indexPath: IndexPath) -> Stories {
         listStory[indexPath.row]
     }
-    
 }

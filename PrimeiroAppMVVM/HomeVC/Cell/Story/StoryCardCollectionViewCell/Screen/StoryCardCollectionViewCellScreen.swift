@@ -29,11 +29,6 @@ class StoryCardCollectionViewCellScreen: UIView {
         cv.backgroundColor = .clear
         return cv
     }()
-    
-    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,7 +40,12 @@ class StoryCardCollectionViewCellScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addElements() {
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+    
+    private func addElements() {
         addSubview(cardView)
         cardView.addSubview(collectionView)
         collectionView.pin(to: cardView)

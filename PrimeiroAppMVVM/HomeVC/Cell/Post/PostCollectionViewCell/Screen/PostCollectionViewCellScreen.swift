@@ -110,7 +110,7 @@ class PostCollectionViewCellScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addElements() {
+    private func addElements() {
         addSubview(cardView)
         cardView.addSubview(likeImageView)
         cardView.addSubview(profileImageView)
@@ -119,7 +119,7 @@ class PostCollectionViewCellScreen: UIView {
         cardView.addSubview(heartImageView)
     }
     
-    func configConstraints() {
+    private func configConstraints() {
         NSLayoutConstraint.activate([
             cardView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
             cardView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
@@ -149,8 +149,6 @@ class PostCollectionViewCellScreen: UIView {
             heartImageView.centerYAnchor.constraint(equalTo: postImageView.centerYAnchor),
             heartImageView.heightAnchor.constraint(equalToConstant: 70),
             heartImageView.widthAnchor.constraint(equalToConstant: 70),
-            
         ])
     }
-    
 }
